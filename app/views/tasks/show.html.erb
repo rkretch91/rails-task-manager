@@ -1,0 +1,5 @@
+<h3><%= @task.name %></h3>
+<p><%= @task.details %></p>
+<p>Task Created: <%= @task.created_at.strftime("%b %e, %l:%M %p") %></p>
+<p><%= link_to "View All Tasks", tasks_path %></p>
+

@@ -1,0 +1,12 @@
+<h1>My Important Tasks</h1>
+<% @tasks.each do |t| %>
+<h3><%= t.name %></h3>
+<p><%= t.details %></p>
+<p>Task Created: <%= t.created_at.strftime("%b %e, %l:%M %p") %></p>
+<p><%= link_to "More Details", task_path(t) %></p>
+<p><%= link_to "Edit Details", edit_task_path(t) %></p>
+<p><%= link_to "Delete", task_path(t),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+<% end %>
+ <p><%= link_to "Put in A New Task", tasks_new_path %></p>
